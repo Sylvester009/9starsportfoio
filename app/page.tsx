@@ -5,6 +5,9 @@ import OtherProjects from '@/components/OtherProjects'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import { ProjectProvider } from '@/context/ProjectContext'
+import About from '@/components/About'
+import Services from '@/components/Services'
+import Testimonials from '@/components/Testimonials'
 
 
 export default function Home() {
@@ -15,8 +18,11 @@ export default function Home() {
         <Header />
         <main className="flex-1">
           <Hero />
+          <About />
           <FeaturedWork />
           <OtherProjects />
+          <Services />
+          <Testimonials />
           <Contact />
         </main>
         <Footer />
