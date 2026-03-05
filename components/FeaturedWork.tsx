@@ -5,10 +5,12 @@ import {CheckCircleIcon} from '@heroicons/react/24/solid';
 import {useProject} from '@/context/ProjectContext';
 import {AnimatePresence, motion} from 'framer-motion';
 import {useEffect, useState} from 'react';
+import CaseStudyModal from './CaseStudyModal';
 
 export default function FeaturedWork() {
   const {selectedProject} = useProject();
   const [isHighlighted, setIsHighlighted] = useState(false);
+  const [isCaseStudyOpen, setIsCaseStudyOpen] = useState(false)
 
   useEffect(() => {
     // Check if we just scrolled to this section
@@ -26,6 +28,7 @@ export default function FeaturedWork() {
     return () => window.removeEventListener('hashchange', checkIfJustScrolled);
   }, []);
   return (
+    <>
     <section
       className={`bg-white py-20 px-6 md:px-20 border-y border-slate-100 ${
         isHighlighted ? 'shadow-[0_0_30px_rgba(244,123,37,0.3)]' : ''
@@ -60,15 +63,15 @@ export default function FeaturedWork() {
               transition={{duration: 0.3}}
               className="grid grid-cols-1 @[1024px]:grid-cols-2 gap-12 items-center bg-background-[#f8f7f5] rounded-2xl overflow-hidden border border-slate-200 shadow-sm"
             >
-              <div className="w-full aspect-video md:aspect-square bg-slate-100 relative group overflow-hidden">
+              <div className="w-auto aspect-video md:aspect-square bg-slate-100 relative group overflow-hidden">
                 <Image
                   src={selectedProject.image}
                   alt={selectedProject.title}
                   fill
-                  className="object-cover transform group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-contain h-full w-full transform group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 1024px), 50vw, w-auto"
                 />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/5 transition-colors"></div>
               </div>
               <div className="p-8 md:p-12 flex flex-col gap-6">
                 <div className="flex gap-2 flex-wrap">
@@ -99,8 +102,9 @@ export default function FeaturedWork() {
                     </li>
                   ))}
                 </ul>
-                <button className="flex w-fit items-center justify-center rounded-lg h-12 px-8 bg-[#f47b25] text-white text-base font-bold shadow-lg shadow-[#f47b25]/20 hover:translate-y-[-2px] transition-all mt-4">
-                  View Website
+                <button 
+                    onClick={() => setIsCaseStudyOpen(true)} className="flex w-fit items-center justify-center rounded-lg h-12 px-8 bg-[#f47b25] text-white text-base font-bold shadow-lg shadow-[#f47b25]/20 hover:translate-y-[-2px] transition-all mt-4">
+                  View Case Study
                 </button>
               </div>
             </motion.div>
@@ -108,5 +112,11 @@ export default function FeaturedWork() {
         </div>
       </div>
     </section>
+
+    <CaseStudyModal 
+        isOpen={isCaseStudyOpen}
+        onClose={() => setIsCaseStudyOpen(false)}
+      />
+    </>
   );
 }

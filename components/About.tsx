@@ -10,8 +10,8 @@ export default function About() {
             <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl">
               <img
                 alt="Expert Developer"
-                className="w-full h-full object-cover grayscale contrast-125"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXJqnI3GfE0dMK8OoI4gIgT92Gi7u39EukogwUY0I1IfF-SJVu1rcQWPY0fO6au4CGNJ0G2Ab9AdAfqwBO9D61qH8QU_ub2ho7Bw42CAJnZfJblo_3Rk1GugKYNO1OkW6eRPpPWhDM9GcqD2mfWkf_yGGKCymLGBiKEmEjSXaGpJVhhr0WEkQQ_uIpgemGNM5lCZ1OTuaMmu_sJBW91VrLxWkSXA6-JuiXTngqWLrUYOTemSfEXuwe31pIIw6lY_szw67HxlRFzRr-"
+                className="w-full h-auto object-cover grayscale-50"
+                src="/profile.jpeg"
               />
             </div>
           </div>

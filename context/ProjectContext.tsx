@@ -13,7 +13,16 @@ export interface ProjectDetails {
     label: string
     value: string
   }[]
-  caseStudyLink?: string
+  caseStudy?: {
+    challenge: string
+    solutions: string[]
+    role: string
+    duration: string
+    industry: string
+    liveSiteUrl?: string
+    nextProjectUrl?: string
+    downloadPdfUrl?: string
+  }
   category: string
 }
 
@@ -28,13 +37,24 @@ const defaultProject: ProjectDetails = {
   title: 'Meatopia Meat Shop',
   description: 'A full-featured premium meat marketplace built for a boutique butcher shop.',
   longDescription: 'A full-featured premium meat marketplace built for a boutique butcher shop. Features include custom product selection, persistent cart, and a multi-step secure checkout.',
-  image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBF0am3brBHkBuvpycblCGY8A7cw9oK8dSIh7qPUQhg9_hIrJm8XMD4HvXZLMdxAmElfwAq6MIMpO45zAtw5ewxZUYg_Z7UzMYqHh1y9Bf5X7Px_km3NJe4uDMW6Lkn1tTTD2IO47qmxGyL2_TKnt-NcVyzY0h01SffqR9xtSzN_vBjm8FS7gJpgIsd6Mdr2bjB1m8__nZBHcVsOaYayuxI_OBBAQ9-jkVYxsi3mMSkfq77msOB_gUqpDvHSbvTbsvuKkx5yh4oziNj',
+  image: '/meatopia-profile.png',
   tags: ['Next.js', 'Tailwind CSS', 'Paystack'],
   stats: [
-    { label: 'Lighthouse Performance Score', value: '98/100' },
+    { label: 'Lighthouse Seo Score', value: '92/100' },
     { label: 'Mobile Conversion Rate Increase', value: '45%' },
     { label: 'CMS Integration', value: 'Live Inventory' },
   ],
+  caseStudy: {
+    challenge: "The previous platform suffered from a fragmented user experience, with a 65% drop-off rate during the cart-to-checkout flow. Mobile users particularly struggled with complex navigation and slow load times for high-resolution product images.",
+    solutions: [
+      "One-page checkout system with guest purchase options.",
+      "Optimized image loading using Next.js and Cloudinary CDN.",
+      "AI-driven product recommendations based on browsing history."
+    ],
+    role: "Lead UI/UX Designer & Frontend Developer",
+    duration: "3 Months (Oct 2023 - Jan 2024)",
+    industry: "Food & Beverage"
+  },
   category: 'Food & Beverage'
 }
 
@@ -52,6 +72,17 @@ const allProjectsData: ProjectDetails[] = [
       { label: 'Page Load Time', value: '0.8s' },
       { label: 'Products Indexed', value: '50K+' },
     ],
+    caseStudy: {
+      challenge: "The client needed a scalable platform that could handle rapid growth and provide personalized shopping experiences. The existing solution was struggling with slow load times and couldn't handle peak traffic during sales events.",
+      solutions: [
+        "Implemented server-side rendering with Next.js for optimal performance.",
+        "Built AI recommendation engine using Redis for real-time personalization.",
+        "Created a headless architecture for maximum scalability."
+      ],
+      role: "Lead Developer & Technical Architect",
+      duration: "4 Months (Jan 2024 - Apr 2024)",
+      industry: "Electronics"
+    },
     category: 'Electronics'
   },
   {
@@ -66,6 +97,17 @@ const allProjectsData: ProjectDetails[] = [
       { label: 'Bids Processed/sec', value: '500+' },
       { label: 'Conversion Rate', value: '12%' },
     ],
+    caseStudy: {
+      challenge: "The client needed a scalable platform that could handle rapid growth and provide personalized shopping experiences. The existing solution was struggling with slow load times and couldn't handle peak traffic during sales events.",
+      solutions: [
+        "Implemented server-side rendering with Next.js for optimal performance.",
+        "Built AI recommendation engine using Redis for real-time personalization.",
+        "Created a headless architecture for maximum scalability."
+      ],
+      role: "Lead Developer & Technical Architect",
+      duration: "4 Months (Jan 2024 - Apr 2024)",
+      industry: "Electronics"
+    },
     category: 'Fashion'
   },
   {
@@ -80,6 +122,17 @@ const allProjectsData: ProjectDetails[] = [
       { label: 'Quiz Completion Rate', value: '78%' },
       { label: 'Customer Retention', value: '92%' },
     ],
+    caseStudy: {
+      challenge: "The client needed a scalable platform that could handle rapid growth and provide personalized shopping experiences. The existing solution was struggling with slow load times and couldn't handle peak traffic during sales events.",
+      solutions: [
+        "Implemented server-side rendering with Next.js for optimal performance.",
+        "Built AI recommendation engine using Redis for real-time personalization.",
+        "Created a headless architecture for maximum scalability."
+      ],
+      role: "Lead Developer & Technical Architect",
+      duration: "4 Months (Jan 2024 - Apr 2024)",
+      industry: "Electronics"
+    },
     category: 'Beauty'
   }
 ]
