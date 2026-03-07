@@ -1,4 +1,11 @@
-import { Banknote, Braces, Code, FileTerminal, Palette, Terminal } from "lucide-react";
+import {
+  Banknote,
+  Braces,
+  Code,
+  FileTerminal,
+  Palette,
+  Terminal,
+} from 'lucide-react';
 
 export default function About() {
   return (
@@ -31,9 +38,9 @@ export default function About() {
                 complex inventory and seamless checkout.
               </p>
               <p className="text-slate-600 leading-relaxed">
-                Whether it's custom Stripe integrations or optimizing Shopify
-                speed, my goal is to ensure your technical stack works as hard
-                as your marketing team.
+                Whether it's custom Payment integrations or speed optimization,
+                my goal is to ensure your technical stack works as hard as your
+                marketing team.
               </p>
             </div>
             <div className="pt-6 border-t border-slate-100">

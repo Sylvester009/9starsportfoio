@@ -24,9 +24,9 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
     solutions: selectedProject.caseStudy?.solutions || [],
     role: selectedProject.caseStudy?.role,
     duration: selectedProject.caseStudy?.duration,
-    industry: selectedProject.category || "E-commerce",
+    industry: selectedProject.caseStudy?.industry || "E-commerce",
     tools: selectedProject.tags,
-    liveSiteUrl: "#",
+    liveSiteUrl: selectedProject.websiteLink,
     nextProjectUrl: "#",
     downloadPdfUrl: "#"
   }
@@ -107,6 +107,7 @@ export default function CaseStudyModal({ isOpen, onClose }: CaseStudyModalProps)
                       <div className="flex flex-col gap-3">
                         <a 
                           href={caseStudyData.liveSiteUrl}
+                          target='_blank'
                           className="bg-[#f47b25] hover:bg-[#f47b25]/90 text-white px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-all shadow-md"
                         >
                           Visit Live Site

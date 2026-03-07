@@ -88,8 +88,8 @@ export default function FeaturedWork() {
                   {selectedProject.title}
                 </h4>
                 <p className="text-slate-600 text-lg leading-relaxed">
-                  {selectedProject.longDescription ||
-                    selectedProject.description}
+                  {selectedProject.description ||
+                    selectedProject.longDescription}
                 </p>
                 <ul className="space-y-3">
                   {selectedProject.stats.map((stat, index) => (

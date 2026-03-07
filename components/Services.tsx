@@ -1,6 +1,18 @@
+'use client';
+
 import {Check} from 'lucide-react';
 
 export default function Services() {
+  const handleWhatsApp = (service: string) => {
+    const phone = '2349059850014';
+
+    const message = `Hello, I'm interested in the ${service} service. I saw it on your website and would like to get started.`;
+
+    const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, '_blank');
+  };
+
   return (
     <section className="py-20 px-6 md:px-20 bg-[#f8f7f5]" id="services">
       <div className="max-w-[1280px] mx-auto">
@@ -20,7 +32,7 @@ export default function Services() {
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
             <div className="mb-8">
               <h4 className="text-xl font-bold text-slate-900 mb-2">
-                Essential Shop
+                Basic Shop
               </h4>
               <p className="text-slate-500 text-sm">
                 For startups needing a solid foundation.
@@ -37,16 +49,19 @@ export default function Services() {
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Up to 5 pages
+                Up to 3 pages
               </li>
               <li className="flex items-start gap-3 text-slate-700 text-sm">
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Stripe payment integration
+                WhatsApp order
               </li>
             </ul>
-            <button className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform">
+            <button
+              onClick={() => handleWhatsApp('Basic Shop')}
+              className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform"
+            >
               Get Started
             </button>
           </div>
@@ -56,7 +71,7 @@ export default function Services() {
             </div>
             <div className="mb-8">
               <h4 className="text-xl font-bold text-slate-900 mb-2">
-                Growth Store
+                Standard Store
               </h4>
               <p className="text-slate-500 text-sm">For scaling businesses.</p>
             </div>
@@ -65,29 +80,44 @@ export default function Services() {
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Everything in Essential
+                Everything in Basic
               </li>
               <li className="flex items-start gap-3 text-slate-700 text-sm">
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Inventory management
+                Cart system
               </li>
               <li className="flex items-start gap-3 text-slate-700 text-sm">
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Advanced SEO optimization
+                Checkout page
+              </li>
+              <li className="flex items-start gap-3 text-slate-700 text-sm">
+                <span className="material-symbols-outlined text-[#f47b25] text-xl">
+                  <Check />
+                </span>
+                Payment integration
+              </li>
+              <li className="flex items-start gap-3 text-slate-700 text-sm">
+                <span className="material-symbols-outlined text-[#f47b25] text-xl">
+                  <Check />
+                </span>
+                Order email
               </li>
             </ul>
-            <button className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform">
+            <button
+              onClick={() => handleWhatsApp('Standard Store')}
+              className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform"
+            >
               Get Started
             </button>
           </div>
           <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm flex flex-col hover:shadow-md transition-shadow">
             <div className="mb-8">
               <h4 className="text-xl font-bold text-slate-900 mb-2">
-                Enterprise Solution
+                Premium Solution
               </h4>
               <p className="text-slate-500 text-sm">
                 Custom solutions for large brands.
@@ -98,22 +128,38 @@ export default function Services() {
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Full headless commerce
+                Full e-commerce
               </li>
               <li className="flex items-start gap-3 text-slate-700 text-sm">
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                Custom API integrations
+                Admin dashboard
               </li>
               <li className="flex items-start gap-3 text-slate-700 text-sm">
                 <span className="material-symbols-outlined text-[#f47b25] text-xl">
                   <Check />
                 </span>
-                24/7 Priority support
+                Order management
+              </li>
+
+              <li className="flex items-start gap-3 text-slate-700 text-sm">
+                <span className="material-symbols-outlined text-[#f47b25] text-xl">
+                  <Check />
+                </span>
+                SEO optimization
+              </li>
+              <li className="flex items-start gap-3 text-slate-700 text-sm">
+                <span className="material-symbols-outlined text-[#f47b25] text-xl">
+                  <Check />
+                </span>
+                Speed optimization
               </li>
             </ul>
-            <button className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform">
+            <button
+              onClick={() => handleWhatsApp('Premium Solution')}
+              className="w-full py-4 px-6 bg-[#f47b25] text-white font-bold rounded-xl shadow-lg shadow-[#f47b25]/20 hover:scale-[1.02] transition-transform"
+            >
               Get Started
             </button>
           </div>
