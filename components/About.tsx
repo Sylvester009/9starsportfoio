@@ -17,10 +17,10 @@ export default function About() {
           <div className="relative order-2 @[864px]:order-1">
             <div className="absolute -inset-4 border-2 border-[#f47b25]/20 rounded-2xl translate-x-4 translate-y-4 hidden @[864px]:block"></div>
 
-            <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl">
+           <div className="relative aspect-square rounded-2xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl">
               <img
                 alt="Samuel Sylvester - Frontend Engineer"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
                 src="/profile.jpeg"
               />
             </div>
