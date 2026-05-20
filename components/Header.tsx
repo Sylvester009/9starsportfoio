@@ -1,140 +1,149 @@
 "use client";
 
-import Link from 'next/link';
-import { CodeBracketIcon, Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { useState, useEffect } from 'react';
-import QuoteModal from './QuoteModal';
+import Link from "next/link";
+import {
+  CodeBracketIcon,
+  Bars3Icon,
+  XMarkIcon,
+} from "@heroicons/react/24/outline";
+import { useState, useEffect } from "react";
+import QuoteModal from "./QuoteModal";
 
 export default function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalType, setModalType] = useState<'quote' | 'touch'>('quote');
+  const [modalType, setModalType] = useState<"quote" | "touch">("quote");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const openQuoteModal = () => {
-    setModalType('quote');
+    setModalType("quote");
     setIsModalOpen(true);
-    // Close mobile menu if open
     setIsMobileMenuOpen(false);
   };
 
   // Prevent scrolling when mobile menu is open
   useEffect(() => {
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = "unset";
     };
   }, [isMobileMenuOpen]);
 
-  // Close mobile menu when clicking a link
   const handleLinkClick = () => {
     setIsMobileMenuOpen(false);
   };
 
   return (
     <>
-      <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 px-6 md:px-20 py-4 sticky top-0 bg-[#f8f7f5]/80 backdrop-blur-md z-50">
-        <div className="flex items-center gap-3">
-          <div className="size-8 bg-[#f47b25] rounded-lg flex items-center justify-center text-white">
-            <CodeBracketIcon className="h-5 w-5" />
-          </div>
-          <h2 className="text-xl font-bold leading-tight tracking-tight">
-            9tarxPortfolio
-          </h2>
-        </div>
+      {/* Header */}
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/10 backdrop-blur-xl supports-[backdrop-filter]:bg-white/10">
+        <div className="flex items-center justify-between whitespace-nowrap px-6 md:px-20 py-4">
+          {/* Brand */}
+          <div className="flex items-center gap-3">
+            <div className="size-9 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white shadow-md">
+              <CodeBracketIcon className="h-5 w-5" />
+            </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex flex-1 justify-end gap-10">
-          <div className="flex items-center gap-8">
-            <Link
-              href="#work"
-              className="text-sm font-medium hover:text-[#f47b25] transition-colors"
-            >
-              Work
-            </Link>
-            <Link
-              href="#services"
-              className="text-sm font-medium hover:text-[#f47b25] transition-colors"
-            >
-              Services
-            </Link>
-            <Link
-              href="#about"
-              className="text-sm font-medium hover:text-[#f47b25] transition-colors"
-            >
-              About
-            </Link>
+            <h2 className="text-xl font-bold tracking-tight text-slate-900">
+              Samuel Sylvester
+            </h2>
           </div>
-          <button
-            className="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-11 px-5 bg-[#f47b25] text-white text-sm font-bold shadow-lg shadow-[#f47b25]/20 hover:scale-105 transition-transform active:scale-95"
-            onClick={openQuoteModal}
-          >
-            <span className="truncate">Get in Touch</span>
-          </button>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden">
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 hover:bg-slate-100 rounded-lg transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6" />
-            ) : (
-              <Bars3Icon className="h-6 w-6" />
-            )}
-          </button>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex flex-1 justify-end gap-10">
+            <nav className="flex items-center gap-8 text-sm font-medium text-slate-700">
+              <Link
+                href="#projects"
+                className="hover:text-orange-500 transition-colors"
+              >
+                Projects
+              </Link>
+              <Link
+                href="#experience"
+                className="hover:text-orange-500 transition-colors"
+              >
+                Experience
+              </Link>
+              <Link
+                href="#about"
+                className="hover:text-orange-500 transition-colors"
+              >
+                About
+              </Link>
+            </nav>
+
+            <button
+              onClick={openQuoteModal}
+              className="ml-6 px-5 h-11 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-semibold shadow-md shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
+            >
+              Contact Me
+            </button>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 rounded-lg hover:bg-white/20 transition-colors"
+              aria-label="Toggle menu"
+            >
+              {isMobileMenuOpen ? (
+                <XMarkIcon className="h-6 w-6" />
+              ) : (
+                <Bars3Icon className="h-6 w-6" />
+              )}
+            </button>
+          </div>
         </div>
       </header>
 
-      {/* Mobile Navigation Menu */}
+      {/* Mobile Navigation */}
       <div
-        className={`fixed inset-0 bg-[#f8f7f5] z-40 transition-transform duration-300 ease-in-out md:hidden ${
-          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`fixed inset-0 z-40 bg-white/80 backdrop-blur-xl md:hidden transition-transform duration-300 ease-in-out ${
+          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
-        style={{ top: '72px' }} // Adjust based on your header height
+        style={{ top: "72px" }}
       >
-        <div className="flex flex-col h-full p-8 pt-12">
-          <nav className="flex flex-col gap-8 text-center">
+        <div className="flex flex-col h-full px-8 py-12">
+          <nav className="flex flex-col gap-8 text-center text-lg font-medium text-slate-800">
             <Link
-              href="#work"
+              href="#projects"
               onClick={handleLinkClick}
-              className="text-2xl font-medium hover:text-[#f47b25] transition-colors py-4 border-b border-slate-200"
+              className="py-4 border-b border-slate-200 hover:text-orange-500 transition-colors"
             >
-              Work
+              Projects
             </Link>
             <Link
-              href="#services"
+              href="#experience"
               onClick={handleLinkClick}
-              className="text-2xl font-medium hover:text-[#f47b25] transition-colors py-4 border-b border-slate-200"
+              className="py-4 border-b border-slate-200 hover:text-orange-500 transition-colors"
             >
-              Services
+              Experience
             </Link>
             <Link
               href="#about"
               onClick={handleLinkClick}
-              className="text-2xl font-medium hover:text-[#f47b25] transition-colors py-4 border-b border-slate-200"
+              className="py-4 border-b border-slate-200 hover:text-orange-500 transition-colors"
             >
               About
             </Link>
           </nav>
-          
+
           <div className="mt-auto pb-16">
             <button
               onClick={openQuoteModal}
-              className="w-full cursor-pointer items-center justify-center rounded-lg h-14 px-5 bg-[#f47b25] text-white text-lg font-bold shadow-lg shadow-[#f47b25]/20 hover:scale-105 transition-transform active:scale-95"
+              className="w-full h-14 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
             >
-              <span>Get in Touch</span>
+              Contact Me
             </button>
           </div>
         </div>
       </div>
 
+      {/* Modal */}
       <QuoteModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
