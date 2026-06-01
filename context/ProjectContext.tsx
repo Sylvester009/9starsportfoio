@@ -102,7 +102,7 @@ const allProjectsData: ProjectDetails[] = [
   longDescription:
     'New English is a full-stack e-commerce web application built as a digital replica of Old English Bakery & Superstores. Customers can browse products, add items to their cart, and place orders through a responsive storefront. The platform includes secure authentication powered by Supabase, allowing administrators to manage products and monitor customer orders through a dedicated dashboard. Products and orders are stored in a centralized database, enabling full CRUD operations and real-time inventory management. The application is deployed on Vercel and demonstrates a complete e-commerce workflow without payment gateway integration.',
 
-  image: '/new-english-profile.png',
+  image: '/new-english-store.png',
 
   tags: [
     'Next.js (App Router)',
