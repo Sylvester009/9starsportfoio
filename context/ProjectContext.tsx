@@ -92,35 +92,61 @@ const defaultProject: ProjectDetails = {
 const allProjectsData: ProjectDetails[] = [
   defaultProject,
   {
-    id: 'gadgethub',
-    title: 'GadgetHub E-Store',
-    description: 'Tech retail optimization with AI-powered recommendations.',
-    longDescription:
-      'A cutting-edge electronics e-commerce platform featuring AI-powered product recommendations, real-time inventory sync, and a seamless checkout experience that increased average order value by 35%.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCXJqnI3GfE0dMK8OoI4gIgT92Gi7u39EukogwUY0I1IfF-SJVu1rcQWPY0fO6au4CGNJ0G2Ab9AdAfqwBO9D61qH8QU_ub2ho7Bw42CAJnZfJblo_3Rk1GugKYNO1OkW6eRPpPWhDM9GcqD2mfWkf_yGGKCymLGBiKEmEjSXaGpJVhhr0WEkQQ_uIpgemGNM5lCZ1OTuaMmu_sJBW91VrLxWkSXA6-JuiXTngqWLrUYOTemSfEXuwe31pIIw6lY_szw67HxlRFzRr-',
-    tags: ['Next.js', 'TypeScript', 'AI', 'Redis'],
-    stats: [
-      {label: 'Average Order Value Increase', value: '35%'},
-      {label: 'Page Load Time', value: '0.8s'},
-      {label: 'Products Indexed', value: '50K+'},
+  id: 'new-english-ecommerce',
+
+  title: 'New English E-commerce Platform',
+
+  description:
+    'A full-stack e-commerce platform inspired by Old English Bakery & Superstores, featuring authentication, product management, order tracking, and an administrative dashboard.',
+
+  longDescription:
+    'New English is a full-stack e-commerce web application built as a digital replica of Old English Bakery & Superstores. Customers can browse products, add items to their cart, and place orders through a responsive storefront. The platform includes secure authentication powered by Supabase, allowing administrators to manage products and monitor customer orders through a dedicated dashboard. Products and orders are stored in a centralized database, enabling full CRUD operations and real-time inventory management. The application is deployed on Vercel and demonstrates a complete e-commerce workflow without payment gateway integration.',
+
+  image: '/new-english-profile.png',
+
+  tags: [
+    'Next.js (App Router)',
+    'TypeScript',
+    'Tailwind CSS',
+    'Supabase Auth',
+    'Supabase Database',
+    'React',
+    'Vercel',
+  ],
+
+  stats: [
+    {label: 'Architecture', value: 'Full-Stack Next.js'},
+    {label: 'Authentication', value: 'Supabase Auth'},
+    {label: 'Database', value: 'Supabase'},
+  ],
+
+  caseStudy: {
+    challenge:
+      'The goal was to create a digital storefront for a traditional retail business while providing administrators with tools to manage inventory and customer orders. The project required implementing secure authentication, database integration, and administrative workflows that mirror real-world e-commerce operations.',
+
+    solutions: [
+      'Built a responsive e-commerce storefront for browsing and ordering products.',
+      'Implemented secure user authentication using Supabase Auth.',
+      'Created protected admin dashboard routes for store management.',
+      'Developed full CRUD functionality for creating, viewing, editing, and deleting products.',
+      'Integrated Supabase Database for centralized product and order storage.',
+      'Built an order management system that captures customer orders and displays them within the admin dashboard.',
+      'Designed a scalable architecture using Next.js App Router and TypeScript.',
     ],
-    caseStudy: {
-      challenge:
-        "The client needed a scalable platform that could handle rapid growth and provide personalized shopping experiences. The existing solution was struggling with slow load times and couldn't handle peak traffic during sales events.",
-      solutions: [
-        'Implemented server-side rendering with Next.js for optimal performance.',
-        'Built AI recommendation engine using Redis for real-time personalization.',
-        'Created a headless architecture for maximum scalability.',
-      ],
-      role: 'Lead Developer & Technical Architect',
-      duration: '4 Months (Jan 2024 - Apr 2024)',
-      industry: 'Electronics',
-    },
-    category: 'Electronics',
-    projectType: 'On Waitlist',
-    websiteLink: '#',
+
+    role: 'Full-Stack Developer',
+
+    duration: '4 Weeks',
+
+    industry: 'Retail & E-Commerce',
   },
+
+  category: 'E-Commerce',
+
+  projectType: 'Portfolio Project',
+
+  websiteLink: 'https://newenglish.vercel.app/',
+},
   {
     id: 'kicks-central',
     title: 'Kicks Central',
