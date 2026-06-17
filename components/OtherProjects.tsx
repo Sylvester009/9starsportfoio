@@ -58,7 +58,6 @@ export default function OtherProjects() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute top-4 left-4">
-                <span className="absolute inset-0 bg-black/20 rounded-lg backdrop-blur-sm" />
                 <span className={`px-4 py-2 rounded-lg text-sm font-bold border shadow-sm ${statusColors[project.status] || "bg-slate-500/10 text-slate-500 border-slate-500/20"}`}>
                   {project.status}
                 </span>
