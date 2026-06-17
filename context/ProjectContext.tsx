@@ -84,7 +84,7 @@ const defaultProject: ProjectDetails = {
 
   category: 'E-Commerce',
 
-  status: 'Live Production',
+  status: 'Completed',
 
   websiteLink: 'https://www.meatopia.com.ng',
 };
