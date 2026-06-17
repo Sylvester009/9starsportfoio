@@ -24,7 +24,7 @@ export interface ProjectDetails {
     downloadPdfUrl?: string;
   };
   category: string;
-  projectType: string;
+  status: string;
   websiteLink: string;
 }
 
@@ -84,7 +84,7 @@ const defaultProject: ProjectDetails = {
 
   category: 'E-Commerce',
 
-  projectType: 'Live Production',
+  status: 'Live Production',
 
   websiteLink: 'https://www.meatopia.com.ng',
 };
@@ -143,7 +143,7 @@ const allProjectsData: ProjectDetails[] = [
 
   category: 'E-Commerce',
 
-  projectType: 'Portfolio Project',
+  status: 'Completed',
 
   websiteLink: 'https://newenglish.vercel.app/',
 },
@@ -174,7 +174,7 @@ const allProjectsData: ProjectDetails[] = [
       industry: 'Electronics',
     },
     category: 'Fashion',
-    projectType: 'On Waitlist',
+    status: 'On Waitlist',
     websiteLink: '#',
   },
   {
@@ -204,7 +204,7 @@ const allProjectsData: ProjectDetails[] = [
       industry: 'Electronics',
     },
     category: 'Beauty',
-    projectType: 'In Development',
+    status: 'In Development',
     websiteLink: '#',
   },
 ];
