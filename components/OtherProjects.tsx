@@ -44,7 +44,7 @@ export default function OtherProjects() {
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <span className="bg-white/90 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">
-                  {project.projectType}
+                  {project.status}
                 </span>
               </div>
             </div>
