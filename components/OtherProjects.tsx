@@ -22,9 +22,9 @@ export default function OtherProjects() {
   };
 
   const statusColors: Record<string, string> = {
-    Completed: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
-    "In Progress": "bg-amber-500/10 text-amber-500 border-amber-500/20",
-    Archived: "bg-rose-500/10 text-rose-500 border-rose-500/20",
+  Completed: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  "In Progress": "bg-amber-50 text-amber-800 border-amber-200",
+  Archived: "bg-rose-50 text-rose-700 border-rose-200",
   };
 
   return (
@@ -37,18 +37,28 @@ export default function OtherProjects() {
         {allProjects.map(project => (
           <div
             key={project.id}
-            className="group flex flex-col gap-4"
+            role="button"
+            tabIndex={0}
+            className="group flex flex-col gap-4 cursor-pointer"
             onClick={() => handleProjectClick(project)}
-          >
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                handleProjectClick(project);
+              }
+            }}
+            aria-label={`View ${project.title} project`}
+            >
             <div className="relative aspect-16/10 bg-slate-200 rounded-xl overflow-hidden border border-slate-200">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
+                className="object-cover group-hover:scale-110 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute top-4 left-4">
+                <span className="absolute inset-0 bg-black/20 rounded-lg backdrop-blur-sm" />
                 <span className={`px-4 py-2 rounded-lg text-sm font-bold border shadow-sm ${statusColors[project.status] || "bg-slate-500/10 text-slate-500 border-slate-500/20"}`}>
                   {project.status}
                 </span>
