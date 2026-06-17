@@ -42,7 +42,7 @@ export default function OtherProjects() {
                 className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
+              <div className="absolute top-4 left-4">
                 <span className="bg-white/90 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">
                   {project.status}
                 </span>
