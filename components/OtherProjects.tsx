@@ -21,6 +21,12 @@ export default function OtherProjects() {
     }
   };
 
+  const statusColors: Record<string, string> = {
+    Completed: "bg-emerald-500/10 text-emerald-500 border-emerald-500/20",
+    "In Progress": "bg-amber-500/10 text-amber-500 border-amber-500/20",
+    Archived: "bg-rose-500/10 text-rose-500 border-rose-500/20",
+  };
+
   return (
     <section className="py-24 px-6 md:px-20 max-w-[1280px] mx-auto">
       <h3 className="text-2xl font-bold text-slate-900 mb-10">
@@ -43,7 +49,7 @@ export default function OtherProjects() {
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute top-4 left-4">
-                <span className="bg-white/90 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">
+                <span className={`px-4 py-2 rounded-lg text-sm font-bold border shadow-sm ${statusColors[project.status] || "bg-slate-500/10 text-slate-500 border-slate-500/20"}`}>
                   {project.status}
                 </span>
               </div>
