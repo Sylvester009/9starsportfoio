@@ -35,147 +35,173 @@ interface ProjectContextType {
 }
 
 const defaultProject: ProjectDetails = {
-  id: 'meatopia-meat-shop',
+  id: 'formflash',
 
-  title: 'Meatopia E-commerce Platform',
+  title: 'FormFlash',
 
   description:
-    'A production-ready e-commerce platform for a meat delivery business, enabling customers to browse products, select weight variants, and complete secure online purchases.',
+    'A modern form-building platform designed to help teachers create quizzes, tests, assignments, and data collection forms through an intuitive drag-and-drop interface.',
 
   longDescription:
-    'Meatopia is a full-stack e-commerce web application built for a local butcher business to enable seamless online ordering. Customers can browse available meat products, select weight variants (such as 1kg or 2kg), adjust quantities, and complete secure payments using Paystack. The application features a persistent shopping cart, server-side payment verification, and automated order confirmation emails sent to the business after successful transactions. The platform is deployed on Vercel and currently used by real customers to place orders.',
+    'FormFlash is a full-stack SaaS application being built to simplify how educators create and manage assessments and data collection forms. The platform provides a visual drag-and-drop form builder that allows teachers to quickly design quizzes, tests, assignments, and surveys without technical knowledge. Users can customize form fields, preview forms before publishing, and access dedicated dashboards for managing responses and viewing analytics. The project focuses on improving efficiency for educators by replacing repetitive manual processes with a streamlined digital workflow. Built with modern web technologies, FormFlash showcases advanced frontend architecture, dynamic UI design, and scalable SaaS product development.',
 
-  image: '/meatopia-profile.png',
+  image: '/newcreator.png',
 
   tags: [
     'Next.js (App Router)',
     'TypeScript',
+    'React',
     'Tailwind CSS',
-    'Paystack',
-    'Nodemailer',
+    'Drag & Drop',
+    'SaaS',
+    'Responsive Design',
     'Vercel',
   ],
 
   stats: [
-    {label: 'Architecture', value: 'Full-Stack Next.js'},
-    {label: 'Checkout Flow', value: 'Single-Page Checkout'},
-    {label: 'Deployment', value: 'Vercel + Custom Domain'},
+    {label: 'Product Type', value: 'EdTech SaaS'},
+    {label: 'Core Feature', value: 'Drag-and-Drop Form Builder'},
+    {label: 'Target Users', value: 'Teachers & Educators'},
   ],
 
   caseStudy: {
     challenge:
-      'The business relied primarily on manual ordering through phone calls and messaging, which made it difficult for customers to easily browse available products, select specific meat quantities, and complete purchases efficiently.',
+      'Teachers often rely on multiple tools or manual processes to create quizzes, assignments, tests, and data collection forms. The goal of FormFlash is to provide a single platform that simplifies form creation while offering an intuitive user experience and centralized management.',
 
     solutions: [
-      'Developed a full e-commerce interface with product listings, variant selection (e.g., 1kg / 2kg), and quantity controls.',
-      'Implemented a persistent cart system using LocalStorage to maintain cart items across sessions.',
-      'Built a single-page checkout experience that combines cart review, customer details form, and payment initiation.',
-      'Integrated Paystack Inline payment for secure online transactions.',
-      'Implemented server-side payment verification using Next.js API routes to ensure transaction validity.',
-      'Automated order confirmation emails using Nodemailer after successful payments.',
+      'Designed and developed a visual drag-and-drop form builder interface.',
+      'Created a form creation workflow for building quizzes, tests, assignments, and surveys.',
+      'Built responsive dashboards for managing forms, responses, and analytics.',
+      'Developed form preview and response submission interfaces.',
+      'Implemented reusable component architecture for scalable feature development.',
+      'Focused on user-centered design to reduce the complexity of form creation for educators.',
     ],
 
-    role: 'Full-Stack Developer',
+    role: 'Frontend Developer',
 
-    duration: '2 Weeks',
+    duration: 'Ongoing',
 
-    industry: 'Food & Beverage',
+    industry: 'Education Technology (EdTech)',
   },
 
-  category: 'E-Commerce',
+  category: 'SaaS',
 
-  status: 'Completed',
+  status: 'In Progress',
 
-  websiteLink: 'https://www.meatopia.com.ng',
+  websiteLink: 'https://formflash.vercel.app/',
 };
 
 const allProjectsData: ProjectDetails[] = [
   defaultProject,
   {
-  id: 'new-english-ecommerce',
+    id: 'new-english-ecommerce',
 
-  title: 'New English E-commerce Platform',
+    title: 'New English E-commerce Platform',
 
-  description:
-    'A full-stack e-commerce platform inspired by Old English Bakery & Superstores, featuring authentication, product management, order tracking, and an administrative dashboard.',
+    description:
+      'A full-stack e-commerce platform inspired by Old English Bakery & Superstores, featuring authentication, product management, order tracking, and an administrative dashboard.',
 
-  longDescription:
-    'New English is a full-stack e-commerce web application built as a digital replica of Old English Bakery & Superstores. Customers can browse products, add items to their cart, and place orders through a responsive storefront. The platform includes secure authentication powered by Supabase, allowing administrators to manage products and monitor customer orders through a dedicated dashboard. Products and orders are stored in a centralized database, enabling full CRUD operations and real-time inventory management. The application is deployed on Vercel and demonstrates a complete e-commerce workflow without payment gateway integration.',
-
-  image: '/new-english-store.png',
-
-  tags: [
-    'Next.js (App Router)',
-    'TypeScript',
-    'Tailwind CSS',
-    'Supabase Auth',
-    'Supabase Database',
-    'React',
-    'Vercel',
-  ],
-
-  stats: [
-    {label: 'Architecture', value: 'Full-Stack Next.js'},
-    {label: 'Authentication', value: 'Supabase Auth'},
-    {label: 'Database', value: 'Supabase'},
-  ],
-
-  caseStudy: {
-    challenge:
-      'The goal was to create a digital storefront for a traditional retail business while providing administrators with tools to manage inventory and customer orders. The project required implementing secure authentication, database integration, and administrative workflows that mirror real-world e-commerce operations.',
-
-    solutions: [
-      'Built a responsive e-commerce storefront for browsing and ordering products.',
-      'Implemented secure user authentication using Supabase Auth.',
-      'Created protected admin dashboard routes for store management.',
-      'Developed full CRUD functionality for creating, viewing, editing, and deleting products.',
-      'Integrated Supabase Database for centralized product and order storage.',
-      'Built an order management system that captures customer orders and displays them within the admin dashboard.',
-      'Designed a scalable architecture using Next.js App Router and TypeScript.',
-    ],
-
-    role: 'Full-Stack Developer',
-
-    duration: '4 Weeks',
-
-    industry: 'Retail & E-Commerce',
-  },
-
-  category: 'E-Commerce',
-
-  status: 'Completed',
-
-  websiteLink: 'https://newenglish.vercel.app/',
-},
-  {
-    id: 'kicks-central',
-    title: 'Kicks Central',
-    description: 'High-traffic footwear marketplace with real-time bidding.',
     longDescription:
-      'A sneaker marketplace handling 100K+ daily active users with features like real-time bidding, size matching algorithm, and integrated authentication with social platforms.',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBMjat8_OrSA9t1aGO_jPZ768nK0yPwo44zMEQeZ4l-ZTyCP-TmroGbgMYWTnBuk0cDYelWl0NLVdWaJmlGjjl2DXXkjgr07ZIYmzdcOv0KkJsciPm6-fZZ2oZhPuoyL4-r8zAaBKIwsKCjkII0VXJrGP9vL0iGpLxNGmiJBGuK2gEVhfQcg8H95h1B4dFv8W4Che37fUqypuRloQBNzQG6an2TCUU647l17HDmktW-LDddHS5EgbrHaaGFx4rzH5jaml-rKl1uves8',
-    tags: ['Next.js', 'WebSockets', 'Prisma', 'PostgreSQL'],
-    stats: [
-      {label: 'Daily Active Users', value: '100K+'},
-      {label: 'Bids Processed/sec', value: '500+'},
-      {label: 'Conversion Rate', value: '12%'},
+      'New English is a full-stack e-commerce web application built as a digital replica of Old English Bakery & Superstores. Customers can browse products, add items to their cart, and place orders through a responsive storefront. The platform includes secure authentication powered by Supabase, allowing administrators to manage products and monitor customer orders through a dedicated dashboard. Products and orders are stored in a centralized database, enabling full CRUD operations and real-time inventory management. The application is deployed on Vercel and demonstrates a complete e-commerce workflow without payment gateway integration.',
+
+    image: '/new-english-store.png',
+
+    tags: [
+      'Next.js (App Router)',
+      'TypeScript',
+      'Tailwind CSS',
+      'Supabase Auth',
+      'Supabase Database',
+      'React',
+      'Vercel',
     ],
+
+    stats: [
+      {label: 'Architecture', value: 'Full-Stack Next.js'},
+      {label: 'Authentication', value: 'Supabase Auth'},
+      {label: 'Database', value: 'Supabase'},
+    ],
+
     caseStudy: {
       challenge:
-        "The client needed a scalable platform that could handle rapid growth and provide personalized shopping experiences. The existing solution was struggling with slow load times and couldn't handle peak traffic during sales events.",
+        'The goal was to create a digital storefront for a traditional retail business while providing administrators with tools to manage inventory and customer orders. The project required implementing secure authentication, database integration, and administrative workflows that mirror real-world e-commerce operations.',
+
       solutions: [
-        'Implemented server-side rendering with Next.js for optimal performance.',
-        'Built AI recommendation engine using Redis for real-time personalization.',
-        'Created a headless architecture for maximum scalability.',
+        'Built a responsive e-commerce storefront for browsing and ordering products.',
+        'Implemented secure user authentication using Supabase Auth.',
+        'Created protected admin dashboard routes for store management.',
+        'Developed full CRUD functionality for creating, viewing, editing, and deleting products.',
+        'Integrated Supabase Database for centralized product and order storage.',
+        'Built an order management system that captures customer orders and displays them within the admin dashboard.',
+        'Designed a scalable architecture using Next.js App Router and TypeScript.',
       ],
-      role: 'Lead Developer & Technical Architect',
-      duration: '4 Months (Jan 2024 - Apr 2024)',
-      industry: 'Electronics',
+
+      role: 'Full-Stack Developer',
+
+      duration: '4 Weeks',
+
+      industry: 'Retail & E-Commerce',
     },
-    category: 'Fashion',
-    status: 'On Waitlist',
-    websiteLink: '#',
+
+    category: 'E-Commerce',
+
+    status: 'Completed',
+
+    websiteLink: 'https://newenglish.vercel.app/',
+  },
+  {
+    id: 'meatopia-meat-shop',
+
+    title: 'Meatopia E-commerce Platform',
+
+    description:
+      'A production-ready e-commerce platform for a meat delivery business, enabling customers to browse products, select weight variants, and complete secure online purchases.',
+
+    longDescription:
+      'Meatopia is a full-stack e-commerce web application built for a local butcher business to enable seamless online ordering. Customers can browse available meat products, select weight variants (such as 1kg or 2kg), adjust quantities, and complete secure payments using Paystack. The application features a persistent shopping cart, server-side payment verification, and automated order confirmation emails sent to the business after successful transactions. The platform is deployed on Vercel and currently used by real customers to place orders.',
+
+    image: '/meatopia-profile.png',
+
+    tags: [
+      'Next.js (App Router)',
+      'TypeScript',
+      'Tailwind CSS',
+      'Paystack',
+      'Nodemailer',
+      'Vercel',
+    ],
+
+    stats: [
+      {label: 'Architecture', value: 'Full-Stack Next.js'},
+      {label: 'Checkout Flow', value: 'Single-Page Checkout'},
+      {label: 'Deployment', value: 'Vercel + Custom Domain'},
+    ],
+
+    caseStudy: {
+      challenge:
+        'The business relied primarily on manual ordering through phone calls and messaging, which made it difficult for customers to easily browse available products, select specific meat quantities, and complete purchases efficiently.',
+
+      solutions: [
+        'Developed a full e-commerce interface with product listings, variant selection (e.g., 1kg / 2kg), and quantity controls.',
+        'Implemented a persistent cart system using LocalStorage to maintain cart items across sessions.',
+        'Built a single-page checkout experience that combines cart review, customer details form, and payment initiation.',
+        'Integrated Paystack Inline payment for secure online transactions.',
+        'Implemented server-side payment verification using Next.js API routes to ensure transaction validity.',
+        'Automated order confirmation emails using Nodemailer after successful payments.',
+      ],
+
+      role: 'Full-Stack Developer',
+
+      duration: '2 Weeks',
+
+      industry: 'Food & Beverage',
+    },
+
+    category: 'E-Commerce',
+
+    status: 'Completed',
+
+    websiteLink: 'https://www.meatopia.com.ng',
   },
   {
     id: 'vanilla-bakery',

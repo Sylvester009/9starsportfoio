@@ -39,11 +39,11 @@ export default function Header() {
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/10 backdrop-blur-xl supports-[backdrop-filter]:bg-white/10">
+      <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/10 backdrop-blur-xl supports-backdrop-filter:bg-white/10">
         <div className="flex items-center justify-between whitespace-nowrap px-6 md:px-20 py-4">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <div className="size-9 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white shadow-md">
+            <div className="size-9 bg-linear-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center text-white shadow-md">
               <CodeBracketIcon className="h-5 w-5" />
             </div>
 
@@ -77,7 +77,7 @@ export default function Header() {
 
             <button
               onClick={openQuoteModal}
-              className="ml-6 px-5 h-11 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white text-sm font-semibold shadow-md shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
+              className="ml-6 px-5 h-11 rounded-lg bg-linear-to-r from-orange-500 to-orange-600 text-white text-sm font-semibold shadow-md shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
             >
               Contact Me
             </button>
@@ -135,7 +135,7 @@ export default function Header() {
           <div className="mt-auto pb-16">
             <button
               onClick={openQuoteModal}
-              className="w-full h-14 rounded-lg bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
+              className="w-full h-14 rounded-lg bg-linear-to-r from-orange-500 to-orange-600 text-white text-lg font-semibold shadow-lg shadow-orange-500/20 hover:scale-105 active:scale-95 transition-transform"
             >
               Contact Me
             </button>
